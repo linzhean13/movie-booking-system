@@ -1,6 +1,8 @@
 # 🎬 MyCinema 電影訂票平台
 
 > 這是「資訊系統實驗」課程期末專題，一個純前端實作的線上電影訂票與後台管理系統。
+> 
+> 🎥 **系統實際操作展示：** [點擊觀看 Demo 影片](https://drive.google.com/drive/folders/18SgxeE-AHFtRBxzYaWvfFZRy-wnkJ-tg?usp=drive_link)
 
 ## 📝 專案簡介
 本專案模擬完整的線上影城系統，分為「一般使用者前台」與「管理員後台」兩大區塊。專案著重於 **UI/UX 介面設計**、**RWD 響應式排版**，並運用瀏覽器內建的 **`localStorage`** 來模擬資料庫，實現跨頁面的狀態管理與資料持久化。
@@ -46,13 +48,13 @@ MyCinema/
 │
 ├── images/               # 圖片資源 (電影海報、分級圖示)
 │
-├── 電影訂票平台.pdf       # 專題簡報與架構解析 (詳細功能說明)
 ├── index.html            # 系統首頁入口
 ├── login.html            # 管理員登入頁
 ├── booking.html          # 前台訂票頁
 ├── admin.html            # 後台管理首頁
 ├── schedule.html         # 排片設定頁
-└── seats.html            # 座位設定頁
+├── seats.html            # 座位設定頁
+└── 電影訂票平台.pdf       # 專題簡報與架構解析 (詳細功能說明)
 ```
 
 ## 🚀 如何在本地端執行 (How to Run)
