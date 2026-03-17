@@ -1,0 +1,135 @@
+/* 容器樣式 */
+.seats-container {
+  width: clamp(700px, 60%, 100vw);
+  margin: 2em auto;
+  padding: 1.5em 2em;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.seats-container h2 {
+  font-size: 1.4em;
+  color: #2b3a55;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* 排片下拉選單置中 */
+#scheduleSelect {
+  display: block;
+  width: 100%;
+  padding: 0.6em;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+/* 座位圖主區塊 */
+#seatLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+/* 每一列橫向座位 */
+.seat-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* 左列 A~H 與上排 1~14 標籤 */
+.seat-label {
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 單一座位樣式 */
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  background-color: #e0e0e0;
+}
+
+/* 不同狀態顏色 */
+.seat.available {
+  background-color: #9fd8cb;
+}
+.seat.sold {
+  background-color: #ff7f7f;
+  cursor: not-allowed;
+}
+.seat.reserved {
+  background-color: #f0c674;
+}
+
+/* 銀幕區域 */
+.seat-screen {
+  text-align: center;
+  background-color: #ccc;
+  color: #333;
+  padding: 8px;
+  margin-bottom: 1em;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* 儲存按鈕置中 */
+#saveSeats {
+  display: block;
+  margin: 2em auto 1em;
+  padding: 0.6em 1.5em;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2b3a55;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#saveSeats:hover {
+  background-color: #3d4f70;
+}
+
+/* 狀態圖例 */
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 1.5em 0;
+  font-size: 14px;
+}
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.legend-box.available {
+  background-color: #9fd8cb;
+}
+.legend-box.sold {
+  background-color: #ff7f7f;
+}
+.legend-box.reserved {
+  background-color: #f0c674;
+}

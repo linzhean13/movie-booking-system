@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>座位設定 - MyCinema</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/seats.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>MyCinema 影城管理後台 - 座位設定</h1>
+      <nav><a href="admin.html">回管理首頁</a></nav>
+    </header>
+
+    <main class="seats-container">
+      <section>
+        <h2>選擇場次</h2>
+        <label for="scheduleSelect">場次：</label>
+        <select id="scheduleSelect">
+          <!-- JS 動態產生選項 -->
+        </select>
+      </section>
+
+      <section>
+        <h2>座位配置</h2>
+        <div class="seat-screen">銀幕區域</div>
+        <div id="seatLayout" class="seat-grid">
+          <!-- JS 動態產生 -->
+        </div>
+
+        <div class="seat-legend">
+          <div><span class="legend-box available"></span> 可售</div>
+          <div><span class="legend-box sold"></span> 已售</div>
+          <div><span class="legend-box reserved"></span> 保留</div>
+        </div>
+
+        <button id="saveSeats">儲存座位狀態</button>
+      </section>
+    </main>
+
+    <footer><p>© 2025 MyCinema</p></footer>
+    <script src="js/seats.js"></script>
+  </div>
+</body>
+</html>

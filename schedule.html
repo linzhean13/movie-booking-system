@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>排片設定 - MyCinema</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/schedule.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MyCinema 影城管理後台 - 排片設定</h1>
+      <nav>
+        <a href="admin.html">回管理首頁</a>
+      </nav>
+    </header>
+
+    <main class="schedule">
+      <section>
+        <h2>新增排片</h2>
+        <form id="scheduleForm">
+          <label for="movieTitle">電影名稱：</label>
+          <select id="movieTitle" required>
+            <option value="">請選擇電影</option>
+            <option value="movie01">關於我和鬼變成家人的那件事</option>
+            <option value="movie02">鈴芽之旅</option>
+            <option value="movie03">馴龍高手</option>
+            <option value="movie04">星際寶貝：史迪奇</option>
+            <option value="movie05">不可能的任務：最終清算</option>
+            <option value="movie06">滿血復活</option>
+            <option value="movie07">絕命終結站 血脈</option>
+            <option value="movie08">怪奇艾瑪</option>
+          </select>
+
+          <label>影廳：
+            <select id="room">
+              <option value="A">A 廳</option>
+              <option value="B">B 廳</option>
+            </select>
+          </label>
+
+          <label>放映日期：
+            <input type="date" id="date" required />
+          </label>
+
+          <label>放映時間：
+            <input type="time" id="time" required />
+          </label>
+
+          <button type="submit">新增場次</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>目前排片清單</h2>
+        <ul id="scheduleList"></ul>
+      </section>
+    </main>
+
+
+    <footer><p>© 2025 MyCinema</p></footer>
+    <script src="js/schedule.js"></script>
+  </body>
+</html>

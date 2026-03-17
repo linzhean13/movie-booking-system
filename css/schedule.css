@@ -1,0 +1,62 @@
+.schedule section {
+  background-color: #ffffff;
+  width: clamp(700px, 60%, 100vw);
+  margin: 1.5em auto;
+  padding: 1.5em 2em;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.schedule section h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #2b3a55;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+#scheduleForm label {
+  display: block;
+  margin: 0.8em 0 0.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+#scheduleForm input,
+#scheduleForm select {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+#scheduleForm button {
+  margin-top: 1em;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  border: none;
+  background-color: #2b3a55;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#scheduleForm button:hover {
+  background-color: #3d4f70;
+}
+
+#scheduleList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#scheduleList li {
+  margin: 6px 0;
+  padding: 0.5em;
+  background-color: #eef2f7;
+  border-left: 4px solid #5a9bd6;
+}

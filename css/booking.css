@@ -1,0 +1,168 @@
+/* ========================= */
+/* 📦 區塊容器與標題樣式 */
+/* ========================= */
+.booking section {
+  background-color: #ffffff;
+  width: clamp(700px, 60%, 100vw);
+  margin: 1.5em auto;
+  padding: 1.5em 2em;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.booking section h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #2b3a55;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+
+.booking-content {
+  width: clamp(700px, 60%, 100vw);
+  margin: 0 auto;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========================= */
+/* 🎬 座位圖區塊樣式 */
+/* ========================= */
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-labels {
+  display: grid;
+  grid-template-columns: repeat(15, 34px); /* 14格 + spacer = 15 */
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+.col-label {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  margin-right: 4px;
+}
+
+.seat-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+}
+
+.row-label {
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #eee;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+/* 不同狀態 */
+.seat.sold {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: #5a9bd6;
+  color: white;
+}
+
+/* ========================= */
+/* 🎫 表單樣式 */
+/* ========================= */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  min-width: 280px;
+}
+
+.form-row label {
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  height: 38px;
+  width: 250px;              /* ✅ 固定寬度 */
+  min-width: 0;             /* ✅ 避免因內容撐開 */
+  max-width: 100%;
+}
+
+/* ========================= */
+/* 📊 座位狀態統計條 */
+/* ========================= */
+.seat-status-bar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 16px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f7f9fc;
+  color: #333;
+  font-size: 14px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.seat-sample {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+.seat-sample.available {
+  background-color: #e0e0e0;
+}
+
+.seat-sample.sold {
+  background-color: #888;
+}
+
+.seat-sample.selected {
+  background-color: #5a9bd6; /* 柔和藍色 */
+  border: none;
+}

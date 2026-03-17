@@ -1,0 +1,90 @@
+/* === 共用樣式 === */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background-color: #2b3a55;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ddd;
+  margin: 0 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #2b3a55;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+/* 共用按鈕樣式 */
+.book-btn {
+  display: block;
+  margin: 10px auto 0 auto;
+  background-color: #5a9bd6;
+  color: white;
+  border: none;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.book-btn:hover {
+  background-color: #4174a8;
+}
+
+/* 通用標題效果 */
+.highlight-title {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #e0e0e0,
+    #e0e0e0 0.5px,
+    transparent 2px,
+    transparent 6px
+  );
+  padding: 5px clamp(40px, 10vw, 250px);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.highlight-title h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 8px;
+  color: #333;
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+  .movie-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-card {
+    width: 90%;
+  }
+}

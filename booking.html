@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>影城訂票系統 - 訂票</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+  </head>
+  <body>
+    <header>
+      <h1>訂票系統</h1>
+      <nav>
+        <a href="index.html">回首頁</a>
+      </nav>
+    </header>
+
+    <main class="booking">
+      <div class="booking-content">
+        <!-- 選擇場次 -->
+        <section>
+          <h2>選擇場次</h2>
+          <div class="section-content">
+            <div class="form-row">
+              <label for="selectDate">選擇日期：</label>
+              <input type="date" id="selectDate" />
+            </div>
+            <div class="form-row">
+              <label for="selectTime">選擇場次：</label>
+              <select id="selectTime">
+                <option value="">請選擇</option>
+                <!-- 動態產生選項 -->
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- 選擇座位 -->
+        <section>
+          <h2>選擇座位</h2>
+          <div class="section-content">
+            <div class="seat-container">
+              <div class="col-labels">
+                <!-- 顯示 1~14 -->
+              </div>
+              <div class="seat-rows">
+                <!-- 每一行含字母＋座位 -->
+              </div>
+            </div>
+            <div class="seat-status-bar">
+              <div class="status-item">
+                <span class="seat-sample available"></span> 未售出：<span id="availableCount">0</span>席
+              </div>
+              <div class="status-item">
+                <span class="seat-sample sold"></span> 已售出：<span id="soldCount">0</span>席
+              </div>
+              <div class="status-item">
+                <span class="seat-sample selected"></span> 已選擇：<span id="selectedCount">0</span>席
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 選擇票種 -->
+        <section>
+          <h2>選擇票種</h2>
+          <div class="section-content">
+            <select id="ticketType">
+              <option value="340">全票（$340）</option>
+              <option value="280">優待票（$280）</option>
+              <option value="250">早場票（$250）</option>
+              <option value="150">愛心票（$150）</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- 總金額與結帳 -->
+        <section>
+          <h2>總金額</h2>
+          <div class="section-content">
+            <p id="total">NTD 0</p>
+            <button id="checkout" class="book-btn">結帳</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer><p>© 2025 MyCinema</p></footer>
+    <script src="js/booking.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>後台管理 - MyCinema</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>MyCinema 影城管理後台</h1>
+      <nav>
+        <a href="index.html">回前台首頁</a>
+        <a href="#" onclick="logout()">登出</a>
+      </nav>
+      
+    </header>
+
+    <main class="admin">
+      <!-- 管理功能選單 -->
+      <section class="admin-section">
+        <h2>管理功能選單</h2>
+        <div class="admin-buttons">
+          <div class="admin-card" onclick="location.href='schedule.html'">🎬 排片設定</div>
+          <div class="admin-card" onclick="location.href='seats.html'">💺 座位設定</div>
+          <div class="admin-card" id="toggleTimelineBtn">📊 預覽排片摘要</div>
+        </div>
+      </section>
+
+      <!-- 目前排片內容（預設隱藏） -->
+      <section class="admin-section" id="timelineSection" style="display: none;">
+        <h2>目前排片內容</h2>
+        <div class="timeline-header">
+          <label>選擇日期：<input type="date" id="filterDate" /></label>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- 左列廳別 -->
+          <div class="room-column">
+            <div class="room-placeholder"></div>
+            <div class="room-label">A 廳</div>
+            <div class="room-label">B 廳</div>
+          </div>
+
+          <!-- 右側時間軸與排片 -->
+          <div class="timeline-rows">
+            <div class="time-labels" id="timeLabels"></div>
+            <div class="time-row" data-room="A"></div>
+            <div class="time-row" data-room="B"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>© 2025 MyCinema</p></footer>
+    <script src="js/admin.js"></script>
+  </div>
+</body>
+</html>
